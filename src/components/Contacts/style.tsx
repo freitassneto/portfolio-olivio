@@ -8,6 +8,14 @@ export const ContactSection = styled("section", {
   },
 });
 
+export const ContactSection2 = styled("section", {
+  background: "$grey0",
+  padding: "$section 0",
+  "@mobile": {
+    padding: "$sectionMobile 0",
+  },
+});
+
 export const ContactSectionContent = styled("div", {
   display: "flex",
   justifyContent: "space-between",
@@ -18,6 +26,18 @@ export const ContactSectionContent = styled("div", {
 
 export const ContactSectionText = styled("aside", {
   maxWidth: "26.25rem",
+  display: "grid",
+  gridGap: "$2",
+  height: "max-content",
+  position: "sticky",
+  top: "8rem",
+  "@mobile": {
+    position: "static",
+    marginBottom: "$5"
+  },
+});
+
+export const ContactSectionText2 = styled("div", {
   display: "grid",
   gridGap: "$2",
   height: "max-content",
