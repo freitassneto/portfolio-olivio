@@ -8,7 +8,7 @@ import {
 
 export const About = () => {
   return (
-    <ContactSection2>
+    <ContactSection2 id="about">
       <Container>
         <ContactSectionText2>
           <Text type="heading2" color="brand1">
