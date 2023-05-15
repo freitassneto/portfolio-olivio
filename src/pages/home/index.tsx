@@ -28,12 +28,24 @@ import {
   ProjectsAreaContent,
 } from "./style";
 
+import { FloatingWhatsApp } from "react-floating-whatsapp";
+
 export const Home = (): JSX.Element => {
   const gihubUrl = `https://github.com/${userData.githubUser}`;
   const portfolioUrl = `https://github.com/${userData.githubUser}/portfolio-olivio`;
 
   return (
     <main id="home">
+      <FloatingWhatsApp
+        accountName="Olívio Freitas"
+        phoneNumber={userData.whatsappNumber}
+        allowClickAway={true}
+        placeholder="Vi seu portfolio e tenho interesse..."
+        chatMessage="Obrigado pela visita. Em que posso ajudar você?"
+        statusMessage="Responde em até 2h"
+        avatar={`https://github.com/${userData.githubUser}.png`}
+        darkMode={true}
+      />
       <Header>
         <Container>
           <HeaderContent>
@@ -54,7 +66,7 @@ export const Home = (): JSX.Element => {
               </Text>{" "}
               apaixonado por{" "}
               <Text as="span" type="heading1" color="brand1">
-                eficiência.
+                soluções inovadoras.
               </Text>{" "}
             </Text>
             <Text type="body1" color="grey3">
@@ -108,7 +120,7 @@ export const Home = (): JSX.Element => {
         </Container>
       </ProjectsArea>
       <Contacts />
-      <About/>
+      <About />
     </main>
   );
 };
