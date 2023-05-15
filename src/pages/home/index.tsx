@@ -7,6 +7,7 @@ import { Button } from "@/styles/Buttons";
 import { Stack } from "@/components/Stack";
 import { Project } from "@/components/Project";
 import { Contacts } from "@/components/Contacts";
+import { About } from "@/components/About";
 
 // Data
 import { stackData } from "@/utils/stackData";
@@ -27,12 +28,24 @@ import {
   ProjectsAreaContent,
 } from "./style";
 
+import { FloatingWhatsApp } from "react-floating-whatsapp";
+
 export const Home = (): JSX.Element => {
   const gihubUrl = `https://github.com/${userData.githubUser}`;
-  const portfolioUrl = `https://github.com/${userData.githubUser}/my-portfolio`;
+  const portfolioUrl = `https://github.com/${userData.githubUser}/portfolio-olivio`;
 
   return (
     <main id="home">
+      <FloatingWhatsApp
+        accountName="Olívio Freitas"
+        phoneNumber={userData.whatsappNumber}
+        allowClickAway={true}
+        placeholder="Vi seu portfolio e tenho interesse..."
+        chatMessage="Obrigado pela visita. Em que posso ajudar você?"
+        statusMessage="Responde em até 2h"
+        avatar={`https://github.com/${userData.githubUser}.png`}
+        darkMode={true}
+      />
       <Header>
         <Container>
           <HeaderContent>
@@ -44,29 +57,28 @@ export const Home = (): JSX.Element => {
                 width={"48px"}
                 height={"48px"}
               />
-              <Text color="grey4">Hello, my name is {userData.nameUser}</Text>
+              <Text color="grey4">Olá, eu me chamo {userData.nameUser}</Text>
             </Flex>
             <Text as="h1" type="heading1" color="grey5">
-            I{" "}
+              Desenvolvedor{" "}
               <Text as="span" type="heading1" color="brand1">
-                love
+                Full Stack
               </Text>{" "}
-              creating and{" "}
+              apaixonado por{" "}
               <Text as="span" type="heading1" color="brand1">
-                developing
+                soluções inovadoras.
               </Text>{" "}
-              projects
             </Text>
-            <Text type="body1" color="grey2">
-              Discover here in this environment, created especially for you, all
-              my projects and technologies
+            <Text type="body1" color="grey3">
+              Construindo aplicações completas com maestria, otimizando os
+              processos e maximizando os resultados.
             </Text>
             <HeaderButtonsArea>
               <Button as="a" type="primary" href="#projects">
-                See Projects
+                Meus Projetos
               </Button>
               <Button as="a" type="outline" target="_blank" href={portfolioUrl}>
-                See my portfolio source code
+                Veja o código fonte deste portfolio
               </Button>
               <Button
                 color="grey5"
@@ -92,12 +104,12 @@ export const Home = (): JSX.Element => {
           <ProjectAreaWrapperColumns>
             <ProjectsAreaSocialMediaMessage>
               <Text as="h2" type="heading4" color="grey4">
-                My projects
+                Meus projetos
               </Text>
               <Text as="p" type="body1" color="grey2">
-                Some of my{" "}
+                Alguns projetos{" "}
                 <Text as="span" color="brand5">
-                  side projects
+                  realizados
                 </Text>
               </Text>
             </ProjectsAreaSocialMediaMessage>
@@ -108,6 +120,7 @@ export const Home = (): JSX.Element => {
         </Container>
       </ProjectsArea>
       <Contacts />
+      <About />
     </main>
   );
 };
