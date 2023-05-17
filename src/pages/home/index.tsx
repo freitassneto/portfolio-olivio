@@ -64,14 +64,10 @@ export const Home = (): JSX.Element => {
               <Text as="span" type="heading1" color="brand1">
                 Full Stack
               </Text>{" "}
-              apaixonado por{" "}
-              <Text as="span" type="heading1" color="brand1">
-                soluções inovadoras.
-              </Text>{" "}
             </Text>
             <Text type="body1" color="grey3">
-              Construindo aplicações completas com maestria, otimizando os
-              processos e maximizando os resultados.
+              Obrigado pela visita. Navegue nesta página e descubra os projetos
+              que desenvolvi e as tecnologias que eu uso.
             </Text>
             <HeaderButtonsArea>
               <Button as="a" type="primary" href="#projects">
